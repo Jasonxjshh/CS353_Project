@@ -2,7 +2,7 @@ spring:
   datasource:
     username: root
     password: xxjjss123321
-    url: jdbc:mysql://localhost:3306/cs353test?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://121.199.73.186:3306/cs353test?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.cj.jdbc.Driver
   rabbitmq:
     host: 121.199.73.186

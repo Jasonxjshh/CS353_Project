@@ -38,7 +38,7 @@ public class generatorCode {
         DataSourceConfig dsc = new DataSourceConfig();
         dsc.setUsername("root");
         dsc.setPassword("xxjjss123321");
-        dsc.setUrl("jdbc:mysql://localhost:3306/cs353test?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true");
+        dsc.setUrl("jdbc:mysql://121.199.73.186:3306/cs353test?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setDbType(DbType.MYSQL);
         mpg.setDataSource(dsc);
@@ -52,7 +52,7 @@ public class generatorCode {
         mpg.setPackageInfo(pc);
         //4、策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setInclude("sensor_data_test");//设置要映射的表名,只需改这里即可
+        strategy.setInclude("sensor_data");//设置要映射的表名,只需改这里即可
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
         strategy.setEntityLombokModel(true);//是否使用lombok开启注解

@@ -11,6 +11,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.annotation.SubscribeMapping;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
@@ -24,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021-10-16
  */
 @RestController
-
+@CrossOrigin
 public class SensorDataTestController {
 
     @Autowired
@@ -40,5 +41,18 @@ public class SensorDataTestController {
         System.out.println(sensorDataTestMapper.insert(dataTest));
         System.out.println("============");
     }
+
+
+    @RequestMapping("/get")
+    public String test(){
+        SensorDataTest dataTest = sensorDataTestMapper.selectById(1);
+        System.out.println(dataTest);
+        String s = JSON.toJSONString(dataTest);
+        System.out.println(s);
+        return s;
+    }
+
+
+
 }
 
