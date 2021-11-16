@@ -55,19 +55,19 @@ public class SensorData implements Serializable {
 
     private String sensateName;
 
-    private Integer ppm;
+    private Float ppm;
 
-    private Integer celcius;
+    private Float celcius;
 
-    private Integer temperature;
+    private Float temperature;
 
-    private Integer humidity;
+    private Float humidity;
 
     private String filtername;
 
-    private Integer longitude;
+    private Float longitude;
 
-    private Integer latitude;
+    private Float latitude;
 
     private String hsModel;
 

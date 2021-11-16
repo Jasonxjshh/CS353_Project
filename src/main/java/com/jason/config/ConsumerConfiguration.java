@@ -14,7 +14,7 @@ public class ConsumerConfiguration {
 
     @Bean
     public Queue createQueue(){
-        return new Queue("sensorDataTest");
+        return new Queue("sensorData");
     }
 
 }
