@@ -6,5 +6,6 @@ import lombok.Data;
 public class Result<T>{
     private Integer code;
     private String msg;
-    private  T dara;
+    private  T data;
 }
+

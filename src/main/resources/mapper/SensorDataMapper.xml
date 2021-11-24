@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jason.mapper.SensorDataMapper">
+
+    <select id="showAll" resultType="com.jason.pojo.SensorData">
+        select * from cs353test.sensor_data where ID in (
+            select max(ID) as id from cs353test.sensor_data group by sensor_name
+            )
+    </select>
+
+
+    <select id="selectBySensorName" resultType="com.jason.pojo.SensorData">
+        select *
+        from cs353test.sensor_data
+        where sensor_name = #{sensorName}
+        order by capture_date_time desc
+        limit 1
+    </select>
+</mapper>
