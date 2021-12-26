@@ -16,4 +16,13 @@
         order by capture_date_time desc
         limit 1
     </select>
+
+    <select id="toQueryPeriod" resultType="java.util.HashMap">
+        select avg(ppm) , avg(temperature), avg(humidity)
+        from cs353test.sensor_data
+        where sensor_name = #{sensorName}
+        and event_index = #{event}
+        and capture_date_time between #{startTime} and #{endTime}
+    </select>
+
 </mapper>

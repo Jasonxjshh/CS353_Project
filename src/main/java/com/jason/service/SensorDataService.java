@@ -1,12 +1,10 @@
 package com.jason.service;
 
-import com.jason.mapper.SensorDataMapper;
 import com.jason.pojo.SensorData;
 import com.baomidou.mybatisplus.extension.service.IService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -24,4 +22,8 @@ public interface SensorDataService extends IService<SensorData> {
     List<SensorData> showAll();
 
     SensorData selectBySensorName(String sensorName);
+
+    SensorData selectSpecificData(String sensorName, String require);
+
+    double[] toQueryPeriod(String sensorName, Date startTime, Date endTime, int event);
 }

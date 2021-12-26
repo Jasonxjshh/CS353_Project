@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * <p>
- * 
+ * This is the pojo class of sensor data
  * </p>
  *
  * @author Jason
@@ -25,7 +25,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
   @EqualsAndHashCode(callSuper = false)
-    @ApiModel(value="SensorData对象", description="pojo")
+    @ApiModel(value="SensorData Object", description="pojo")
 public class SensorData implements Serializable {
 
     private static final long serialVersionUID = 1L;

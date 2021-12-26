@@ -5,11 +5,13 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
- *  Mapper 接口
+ *  Mapper Interface
  * </p>
  *
  * @author Jason
@@ -18,7 +20,13 @@ import java.util.List;
 @Mapper
 @Repository
 public interface SensorDataMapper extends BaseMapper<SensorData> {
+
+
     List<SensorData> showAll();
 
     SensorData selectBySensorName(String sensorName);
+
+    SensorData selectSpecificData(String sensorName, String require);
+
+    Map<String,Double> toQueryPeriod(String sensorName, Date startTime, Date endTime, int event);
 }

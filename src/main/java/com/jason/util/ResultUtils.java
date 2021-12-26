@@ -1,5 +1,8 @@
 package com.jason.util;
 
+
+import java.util.HashMap;
+
 public class ResultUtils {
     public static Result<Object> success(Object object){
         Result<Object> r = new Result<Object>();
